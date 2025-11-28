@@ -1,0 +1,35 @@
+# --- Environment Info ---
+# Number of Runs per Challenge/AI: 1
+# Timestamp: 2025-09-20T19:47:16.981418
+# OS: Windows 11
+# Python Version: 3.13.3
+# Models:
+#   Claude: claude-3-opus-20240229
+#   ChatGPT: gpt-4-turbo
+#   Gemini: gemini-1.5-pro-latest
+# Executor Service URL: https://executor-service-1029404216382.europe-southwest1.run.app/execute
+# Local LRU Cache Execution: True
+# Libraries:
+#   pandas: 2.2.3
+#   numpy: 2.2.4
+#   matplotlib: 3.10.1
+#   requests: 2.32.3
+#   python-dotenv: 1.1.0
+#   google-generativeai: 0.8.5
+#   google-api-core: 2.24.2
+#   tenacity: 9.1.2
+# --- Benchmark Data (Aggregated/Averaged over Runs) ---
+Metric,ChatGPT,Gemini
+Avg API Time (s),2.6203784704208375,1.8306449413299561
+Std Dev API Time (s),0.899611917686758,0.55579721769021
+Avg LoC,11.4,12.5
+Std Dev LoC,4.6475800154489,4.994441354590566
+Avg Completeness (%),87.0,86.5
+Avg Flake8 Issues,1.5,1.4
+Total Passed (All Runs),47,47
+Total Attempted (All Runs),47,47
+Overall Success Rate (%),100.0,100.0
+Std Dev Success Rate (%),0.0,0.0
+Avg Exec Time (ms),44.39637033563523,45.22317255225753
+Avg Errors/Fails per Challenge,0.0,0.0
+Example Error,,
