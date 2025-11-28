@@ -1,0 +1,95 @@
+run_index,ai,challenge,difficulty,test_case_index,status,execution_time_ms,error_message,stdout,input_args_str,expected_output_str,actual_output_str
+0,ChatGPT,Fibonacci Sequence,Easy,0,Pass,56.093,,,[10],"[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]","[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
+0,ChatGPT,Fibonacci Sequence,Easy,1,Pass,53.491,,,[1],[0],[0]
+0,ChatGPT,Fibonacci Sequence,Easy,2,Pass,49.161,,,[0],[],[]
+0,ChatGPT,Fibonacci Sequence,Easy,3,Pass,48.089,,,[2],"[0, 1]","[0, 1]"
+0,Gemini,Fibonacci Sequence,Easy,0,Pass,48.748,,,[10],"[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]","[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
+0,Gemini,Fibonacci Sequence,Easy,1,Pass,47.281,,,[1],[0],[0]
+0,Gemini,Fibonacci Sequence,Easy,2,Pass,47.277,,,[0],[],[]
+0,Gemini,Fibonacci Sequence,Easy,3,Pass,50.523,,,[2],"[0, 1]","[0, 1]"
+0,ChatGPT,Binary Search,Medium,0,Pass,47.479,,,"[[2, 5, 7, 8, 11, 12], 13]",-1,-1
+0,ChatGPT,Binary Search,Medium,1,Pass,47.943,,,"[[2, 5, 7, 8, 11, 12], 8]",3,3
+0,ChatGPT,Binary Search,Medium,2,Pass,48.104,,,"[[1, 3, 5], 1]",0,0
+0,ChatGPT,Binary Search,Medium,3,Pass,52.040,,,"[[1, 3, 5], 5]",2,2
+0,ChatGPT,Binary Search,Medium,4,Pass,52.253,,,"[[], 5]",-1,-1
+0,Gemini,Binary Search,Medium,0,Pass,50.190,,,"[[2, 5, 7, 8, 11, 12], 13]",-1,-1
+0,Gemini,Binary Search,Medium,1,Pass,55.104,,,"[[2, 5, 7, 8, 11, 12], 8]",3,3
+0,Gemini,Binary Search,Medium,2,Pass,49.324,,,"[[1, 3, 5], 1]",0,0
+0,Gemini,Binary Search,Medium,3,Pass,50.444,,,"[[1, 3, 5], 5]",2,2
+0,Gemini,Binary Search,Medium,4,Pass,47.553,,,"[[], 5]",-1,-1
+0,ChatGPT,Merge Sort,Medium,0,Pass,49.464,,,"[[3, 1, 4, 1, 5, 9, 2, 6]]","[1, 1, 2, 3, 4, 5, 6, 9]","[1, 1, 2, 3, 4, 5, 6, 9]"
+0,ChatGPT,Merge Sort,Medium,1,Pass,48.670,,,"[[5, 4, 3, 2, 1]]","[1, 2, 3, 4, 5]","[1, 2, 3, 4, 5]"
+0,ChatGPT,Merge Sort,Medium,2,Pass,49.217,,,[[1]],[1],[1]
+0,ChatGPT,Merge Sort,Medium,3,Pass,49.369,,,[[]],[],[]
+0,Gemini,Merge Sort,Medium,0,Pass,51.960,,,"[[3, 1, 4, 1, 5, 9, 2, 6]]","[1, 1, 2, 3, 4, 5, 6, 9]","[1, 1, 2, 3, 4, 5, 6, 9]"
+0,Gemini,Merge Sort,Medium,1,Pass,51.024,,,"[[5, 4, 3, 2, 1]]","[1, 2, 3, 4, 5]","[1, 2, 3, 4, 5]"
+0,Gemini,Merge Sort,Medium,2,Pass,50.563,,,[[1]],[1],[1]
+0,Gemini,Merge Sort,Medium,3,Pass,48.515,,,[[]],[],[]
+0,ChatGPT,Count Islands in Grid,Hard,0,Pass,52.185,,,"[[[1, 1, 1, 1, 0], [1, 1, 0, 1, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0]]]",1,1
+0,ChatGPT,Count Islands in Grid,Hard,1,Pass,55.363,,,"[[[1, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 1]]]",3,3
+0,ChatGPT,Count Islands in Grid,Hard,2,Pass,48.995,,,[[]],0,0
+0,ChatGPT,Count Islands in Grid,Hard,3,Pass,51.916,,,"[[[0, 0, 0], [0, 0, 0]]]",0,0
+0,Gemini,Count Islands in Grid,Hard,0,Pass,49.667,,,"[[[1, 1, 1, 1, 0], [1, 1, 0, 1, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0]]]",1,1
+0,Gemini,Count Islands in Grid,Hard,1,Pass,48.167,,,"[[[1, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 1]]]",3,3
+0,Gemini,Count Islands in Grid,Hard,2,Pass,50.238,,,[[]],0,0
+0,Gemini,Count Islands in Grid,Hard,3,Pass,50.270,,,"[[[0, 0, 0], [0, 0, 0]]]",0,0
+0,ChatGPT,Palindrome Check,Easy,0,Pass,48.127,,,"[""A man, a plan, a canal: Panama""]",true,true
+0,ChatGPT,Palindrome Check,Easy,1,Pass,48.946,,,"[""race a car""]",false,false
+0,ChatGPT,Palindrome Check,Easy,2,Pass,50.897,,,"["" ""]",true,true
+0,ChatGPT,Palindrome Check,Easy,3,Pass,47.187,,,"[""""]",true,true
+0,ChatGPT,Palindrome Check,Easy,4,Pass,53.623,,,"[""Was it a car or a cat I saw?""]",true,true
+0,ChatGPT,Palindrome Check,Easy,5,Pass,49.148,,,"[""tab a cat""]",false,false
+0,Gemini,Palindrome Check,Easy,0,Pass,51.132,,,"[""A man, a plan, a canal: Panama""]",true,true
+0,Gemini,Palindrome Check,Easy,1,Pass,50.467,,,"[""race a car""]",false,false
+0,Gemini,Palindrome Check,Easy,2,Pass,51.719,,,"["" ""]",true,true
+0,Gemini,Palindrome Check,Easy,3,Pass,46.625,,,"[""""]",true,true
+0,Gemini,Palindrome Check,Easy,4,Pass,51.366,,,"[""Was it a car or a cat I saw?""]",true,true
+0,Gemini,Palindrome Check,Easy,5,Pass,48.857,,,"[""tab a cat""]",false,false
+0,ChatGPT,Valid Parentheses,Medium,0,Pass,46.668,,,"[""()""]",true,true
+0,ChatGPT,Valid Parentheses,Medium,1,Pass,47.936,,,"[""()[]{}""]",true,true
+0,ChatGPT,Valid Parentheses,Medium,2,Pass,50.945,,,"[""(]""]",false,false
+0,ChatGPT,Valid Parentheses,Medium,3,Pass,47.433,,,"[""([)]""]",false,false
+0,ChatGPT,Valid Parentheses,Medium,4,Pass,48.091,,,"[""{[]}""]",true,true
+0,ChatGPT,Valid Parentheses,Medium,5,Pass,47.646,,,"[""""]",true,true
+0,ChatGPT,Valid Parentheses,Medium,6,Pass,47.771,,,"[""[""]",false,false
+0,ChatGPT,Valid Parentheses,Medium,7,Pass,47.537,,,"[""]""]",false,false
+0,Gemini,Valid Parentheses,Medium,0,Pass,46.990,,,"[""()""]",true,true
+0,Gemini,Valid Parentheses,Medium,1,Pass,50.557,,,"[""()[]{}""]",true,true
+0,Gemini,Valid Parentheses,Medium,2,Pass,48.205,,,"[""(]""]",false,false
+0,Gemini,Valid Parentheses,Medium,3,Pass,49.178,,,"[""([)]""]",false,false
+0,Gemini,Valid Parentheses,Medium,4,Pass,47.535,,,"[""{[]}""]",true,true
+0,Gemini,Valid Parentheses,Medium,5,Pass,49.615,,,"[""""]",true,true
+0,Gemini,Valid Parentheses,Medium,6,Pass,48.530,,,"[""[""]",false,false
+0,Gemini,Valid Parentheses,Medium,7,Pass,47.992,,,"[""]""]",false,false
+0,ChatGPT,LRU Cache,Hard,0,Pass,0.020,None,,"[{""op"": ""__init__"", ""args"": [2]}, {""op"": ""put"", ""args"": [1, 1]}, {""op"": ""put"", ""args"": [2, 2]}, {""op"": ""get"", ""args"": [1], ""expected"": 1}, {""op"": ""put"", ""args"": [3, 3]}, {""op"": ""get"", ""args"": [2], ""expected"": -1}, {""op"": ""put"", ""args"": [4, 4]}, {""op"": ""get"", ""args"": [1], ""expected"": -1}, {""op"": ""get"", ""args"": [3], ""expected"": 3}, {""op"": ""get"", ""args"": [4], ""expected"": 4}]",Sequence Result,Success: True
+0,Gemini,LRU Cache,Hard,0,Pass,0.022,None,,"[{""op"": ""__init__"", ""args"": [2]}, {""op"": ""put"", ""args"": [1, 1]}, {""op"": ""put"", ""args"": [2, 2]}, {""op"": ""get"", ""args"": [1], ""expected"": 1}, {""op"": ""put"", ""args"": [3, 3]}, {""op"": ""get"", ""args"": [2], ""expected"": -1}, {""op"": ""put"", ""args"": [4, 4]}, {""op"": ""get"", ""args"": [1], ""expected"": -1}, {""op"": ""get"", ""args"": [3], ""expected"": 3}, {""op"": ""get"", ""args"": [4], ""expected"": 4}]",Sequence Result,Success: True
+0,ChatGPT,Two Sum,Easy,0,Pass,49.168,,,"[[2, 7, 11, 15], 9]","[0, 1]","[0, 1]"
+0,ChatGPT,Two Sum,Easy,1,Pass,49.218,,,"[[3, 2, 4], 6]","[1, 2]","[1, 2]"
+0,ChatGPT,Two Sum,Easy,2,Pass,47.986,,,"[[3, 3], 6]","[0, 1]","[0, 1]"
+0,ChatGPT,Two Sum,Easy,3,Pass,50.695,,,"[[-1, -3, 5, 9], 4]","[0, 2]","[0, 2]"
+0,Gemini,Two Sum,Easy,0,Pass,49.110,,,"[[2, 7, 11, 15], 9]","[0, 1]","[0, 1]"
+0,Gemini,Two Sum,Easy,1,Pass,50.573,,,"[[3, 2, 4], 6]","[1, 2]","[1, 2]"
+0,Gemini,Two Sum,Easy,2,Pass,47.575,,,"[[3, 3], 6]","[0, 1]","[0, 1]"
+0,Gemini,Two Sum,Easy,3,Pass,48.525,,,"[[-1, -3, 5, 9], 4]","[0, 2]","[0, 2]"
+0,ChatGPT,Longest Substring Without Repeating Characters,Medium,0,Pass,48.128,,,"[""abcabcbb""]",3,3
+0,ChatGPT,Longest Substring Without Repeating Characters,Medium,1,Pass,52.232,,,"[""bbbbb""]",1,1
+0,ChatGPT,Longest Substring Without Repeating Characters,Medium,2,Pass,53.617,,,"[""pwwkew""]",3,3
+0,ChatGPT,Longest Substring Without Repeating Characters,Medium,3,Pass,51.128,,,"[""""]",0,0
+0,ChatGPT,Longest Substring Without Repeating Characters,Medium,4,Pass,49.093,,,"["" ""]",1,1
+0,ChatGPT,Longest Substring Without Repeating Characters,Medium,5,Pass,51.923,,,"[""dvdf""]",3,3
+0,Gemini,Longest Substring Without Repeating Characters,Medium,0,Pass,49.964,,,"[""abcabcbb""]",3,3
+0,Gemini,Longest Substring Without Repeating Characters,Medium,1,Pass,49.409,,,"[""bbbbb""]",1,1
+0,Gemini,Longest Substring Without Repeating Characters,Medium,2,Pass,49.935,,,"[""pwwkew""]",3,3
+0,Gemini,Longest Substring Without Repeating Characters,Medium,3,Pass,49.116,,,"[""""]",0,0
+0,Gemini,Longest Substring Without Repeating Characters,Medium,4,Pass,50.314,,,"["" ""]",1,1
+0,Gemini,Longest Substring Without Repeating Characters,Medium,5,Pass,48.802,,,"[""dvdf""]",3,3
+0,ChatGPT,Minimum Edit Distance,Hard,0,Pass,50.480,,,"[""horse"", ""ros""]",3,3
+0,ChatGPT,Minimum Edit Distance,Hard,1,Pass,52.863,,,"[""intention"", ""execution""]",5,5
+0,ChatGPT,Minimum Edit Distance,Hard,2,Pass,49.223,,,"["""", """"]",0,0
+0,ChatGPT,Minimum Edit Distance,Hard,3,Pass,48.742,,,"[""a"", ""b""]",1,1
+0,ChatGPT,Minimum Edit Distance,Hard,4,Pass,51.945,,,"[""zoologicoarchaeologist"", ""zoogeologist""]",10,10
+0,Gemini,Minimum Edit Distance,Hard,0,Pass,50.651,,,"[""horse"", ""ros""]",3,3
+0,Gemini,Minimum Edit Distance,Hard,1,Pass,50.036,,,"[""intention"", ""execution""]",5,5
+0,Gemini,Minimum Edit Distance,Hard,2,Pass,49.431,,,"["""", """"]",0,0
+0,Gemini,Minimum Edit Distance,Hard,3,Pass,50.343,,,"[""a"", ""b""]",1,1
+0,Gemini,Minimum Edit Distance,Hard,4,Pass,49.287,,,"[""zoologicoarchaeologist"", ""zoogeologist""]",10,10
