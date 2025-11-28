@@ -1,0 +1,42 @@
+# --- Environment Info ---
+# Number of Runs per Challenge/AI: 1
+# Timestamp: 2025-09-20T19:47:16.981418
+# OS: Windows 11
+# Python Version: 3.13.3
+# Models:
+#   Claude: claude-3-opus-20240229
+#   ChatGPT: gpt-4-turbo
+#   Gemini: gemini-1.5-pro-latest
+# Executor Service URL: https://executor-service-1029404216382.europe-southwest1.run.app/execute
+# Local LRU Cache Execution: True
+# Libraries:
+#   pandas: 2.2.3
+#   numpy: 2.2.4
+#   matplotlib: 3.10.1
+#   requests: 2.32.3
+#   python-dotenv: 1.1.0
+#   google-generativeai: 0.8.5
+#   google-api-core: 2.24.2
+#   tenacity: 9.1.2
+# --- Benchmark Data (Aggregated/Averaged over Runs) ---
+ai,challenge,api_execution_time,lines_of_code,completeness,flake8_issues,num_execution_errors,avg_exec_success_rate,avg_exec_time_ms,total_tests_passed,total_tests_attempted,first_execution_error,difficulty
+ChatGPT,Binary Search,2.3061,11.0000,85.0000,1.0000,0.0000,1.0000,51.0007,5,5,,Medium
+ChatGPT,Count Islands in Grid,3.9941,18.0000,95.0000,2.0000,0.0000,1.0000,49.6988,4,4,,Hard
+ChatGPT,Fibonacci Sequence,2.0583,9.0000,90.0000,1.0000,0.0000,1.0000,49.2241,4,4,,Easy
+ChatGPT,LRU Cache,3.1231,16.0000,85.0000,2.0000,0.0000,1.0000,0.0020,1,1,,Hard
+ChatGPT,Longest Substring Without Repeating Characters,2.3065,9.0000,80.0000,1.0000,0.0000,1.0000,49.8670,6,6,,Medium
+ChatGPT,Merge Sort,2.7275,16.0000,95.0000,1.0000,0.0000,1.0000,49.7350,4,4,,Medium
+ChatGPT,Minimum Edit Distance,4.0782,14.0000,85.0000,2.0000,0.0000,1.0000,48.3101,5,5,,Hard
+ChatGPT,Palindrome Check,1.2092,3.0000,90.0000,1.0000,0.0000,1.0000,47.9829,6,6,,Easy
+ChatGPT,Two Sum,1.9269,7.0000,80.0000,1.0000,0.0000,1.0000,49.3003,4,4,,Easy
+ChatGPT,Valid Parentheses,2.4739,11.0000,85.0000,3.0000,0.0000,1.0000,48.8428,8,8,,Medium
+Gemini,Binary Search,1.4955,12.0000,85.0000,1.0000,0.0000,1.0000,50.0008,5,5,,Medium
+Gemini,Count Islands in Grid,2.4579,20.0000,95.0000,2.0000,0.0000,1.0000,49.4362,4,4,,Hard
+Gemini,Fibonacci Sequence,1.5877,11.0000,95.0000,1.0000,0.0000,1.0000,48.6545,4,4,,Easy
+Gemini,LRU Cache,2.2426,15.0000,85.0000,2.0000,0.0000,1.0000,0.0020,1,1,,Hard
+Gemini,Longest Substring Without Repeating Characters,1.9810,13.0000,80.0000,1.0000,0.0000,1.0000,49.7974,6,6,,Medium
+Gemini,Merge Sort,2.1275,18.0000,95.0000,1.0000,0.0000,1.0000,53.3870,4,4,,Medium
+Gemini,Minimum Edit Distance,2.6943,15.0000,85.0000,2.0000,0.0000,1.0000,50.0558,5,5,,Hard
+Gemini,Palindrome Check,1.0585,3.0000,80.0000,2.0000,0.0000,1.0000,49.9042,6,6,,Easy
+Gemini,Two Sum,1.1151,7.0000,80.0000,1.0000,0.0000,1.0000,50.4651,4,4,,Easy
+Gemini,Valid Parentheses,1.5463,11.0000,85.0000,1.0000,0.0000,1.0000,50.5287,8,8,,Medium

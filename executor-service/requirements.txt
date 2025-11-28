@@ -1,0 +1,5 @@
+Flask>=2.0
+# Adicione outras bibliotecas que o código da IA possa precisar
+# Ex: numpy, pandas (se seus desafios precisarem)
+# numpy
+# pandas
