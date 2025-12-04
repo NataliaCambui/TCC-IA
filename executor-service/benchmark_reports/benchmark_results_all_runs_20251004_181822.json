@@ -1,0 +1,3848 @@
+[
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "Fibonacci Sequence",
+    "difficulty": "Easy",
+    "api_execution_time": 2.46893048286438,
+    "lines_of_code": 7,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def fibonacci(n: int) -> list[int]:\n    if n <= 0:\n        return []\n    fib_sequence = [0, 1]\n    while len(fib_sequence) < n:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    return fib_sequence[:n]",
+    "full_response": "def fibonacci(n: int) -> list[int]:\n    if n <= 0:\n        return []\n    fib_sequence = [0, 1]\n    while len(fib_sequence) < n:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    return fib_sequence[:n]",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 50.717032000022755,
+        "output": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          5,
+          8,
+          13,
+          21,
+          34
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.5570420000131,
+        "output": [
+          0
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.41689799997084,
+        "output": [],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.638263000005736,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "Fibonacci Sequence",
+    "difficulty": "Easy",
+    "api_execution_time": 25.083791255950928,
+    "lines_of_code": 7,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def fibonacci(n: int) -> list[int]:\n    sequence = []\n    a, b = 0, 1\n    for _ in range(n):\n        sequence.append(a)\n        a, b = b, a + b\n    return sequence",
+    "full_response": "```python\ndef fibonacci(n: int) -> list[int]:\n    sequence = []\n    a, b = 0, 1\n    for _ in range(n):\n        sequence.append(a)\n        a, b = b, a + b\n    return sequence\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 46.77077299999155,
+        "output": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          5,
+          8,
+          13,
+          21,
+          34
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.239930999988246,
+        "output": [
+          0
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.28524899998865,
+        "output": [],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 53.892657000005784,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "Binary Search",
+    "difficulty": "Medium",
+    "api_execution_time": 3.3902745246887207,
+    "lines_of_code": 11,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def binary_search(arr: list[int], target: int) -> int:\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        \n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n            \n    return -1",
+    "full_response": "def binary_search(arr: list[int], target: int) -> int:\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        \n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n            \n    return -1",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 53.00880799995866,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.36939399997209,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 53.17366099995979,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.47493200004283,
+        "output": 2,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.6793329999482,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "Binary Search",
+    "difficulty": "Medium",
+    "api_execution_time": 11.419327974319458,
+    "lines_of_code": 12,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def binary_search(arr: list[int], target: int) -> int:\n    low = 0\n    high = len(arr) - 1\n\n    while low <= high:\n        mid = low + (high - low) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n            \n    return -1",
+    "full_response": "```python\ndef binary_search(arr: list[int], target: int) -> int:\n    low = 0\n    high = len(arr) - 1\n\n    while low <= high:\n        mid = low + (high - low) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n            \n    return -1\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 51.435396999977456,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.85403100008534,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.15425200008394,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.28009499994823,
+        "output": 2,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.5121310000286,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "Merge Sort",
+    "difficulty": "Medium",
+    "api_execution_time": 4.4373438358306885,
+    "lines_of_code": 20,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    middle = len(arr) // 2\n    left_half = merge_sort(arr[:middle])\n    right_half = merge_sort(arr[middle:])\n\n    def merge(left, right):\n        sorted_list = []\n        left_index, right_index = 0, 0\n        while left_index < len(left) and right_index < len(right):\n            if left[left_index] < right[right_index]:\n                sorted_list.append(left[left_index])\n                left_index += 1\n            else:\n                sorted_list.append(right[right_index])\n                right_index += 1\n        sorted_list.extend(left[left_index:])\n        sorted_list.extend(right[right_index:])\n        return sorted_list\n\n    return merge(left_half, right_half)",
+    "full_response": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    middle = len(arr) // 2\n    left_half = merge_sort(arr[:middle])\n    right_half = merge_sort(arr[middle:])\n\n    def merge(left, right):\n        sorted_list = []\n        left_index, right_index = 0, 0\n        while left_index < len(left) and right_index < len(right):\n            if left[left_index] < right[right_index]:\n                sorted_list.append(left[left_index])\n                left_index += 1\n            else:\n                sorted_list.append(right[right_index])\n                right_index += 1\n        sorted_list.extend(left[left_index:])\n        sorted_list.extend(right[right_index:])\n        return sorted_list\n\n    return merge(left_half, right_half)",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 51.919381999937286,
+        "output": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.350124999908985,
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 54.07186799993724,
+        "output": [
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.40515399998458,
+        "output": [],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "Merge Sort",
+    "difficulty": "Medium",
+    "api_execution_time": 13.711186647415161,
+    "lines_of_code": 18,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def merge_sort(arr: list[int]) -> list[int]:\n    if len(arr) <= 1:\n        return arr\n\n    mid = len(arr) // 2\n    left_half = merge_sort(arr[:mid])\n    right_half = merge_sort(arr[mid:])\n\n    sorted_list = []\n    i, j = 0, 0\n\n    while i < len(left_half) and j < len(right_half):\n        if left_half[i] < right_half[j]:\n            sorted_list.append(left_half[i])\n            i += 1\n        else:\n            sorted_list.append(right_half[j])\n            j += 1\n\n    sorted_list.extend(left_half[i:])\n    sorted_list.extend(right_half[j:])\n    \n    return sorted_list",
+    "full_response": "```python\ndef merge_sort(arr: list[int]) -> list[int]:\n    if len(arr) <= 1:\n        return arr\n\n    mid = len(arr) // 2\n    left_half = merge_sort(arr[:mid])\n    right_half = merge_sort(arr[mid:])\n\n    sorted_list = []\n    i, j = 0, 0\n\n    while i < len(left_half) and j < len(right_half):\n        if left_half[i] < right_half[j]:\n            sorted_list.append(left_half[i])\n            i += 1\n        else:\n            sorted_list.append(right_half[j])\n            j += 1\n\n    sorted_list.extend(left_half[i:])\n    sorted_list.extend(right_half[j:])\n    \n    return sorted_list\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 49.72562599994035,
+        "output": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.04707900002359,
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.75993899995501,
+        "output": [
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.71193599999424,
+        "output": [],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "Count Islands in Grid",
+    "difficulty": "Hard",
+    "api_execution_time": 4.722787141799927,
+    "lines_of_code": 18,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n    \n    def dfs(x, y):\n        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == 0:\n            return\n        grid[x][y] = 0\n        dfs(x + 1, y)\n        dfs(x - 1, y)\n        dfs(x, y + 1)\n        dfs(x, y - 1)\n\n    count = 0\n    for i in range(len(grid)):\n        for j in range(len(grid[i])):\n            if grid[i][j] == 1:\n                dfs(i, j)\n                count += 1\n    return count",
+    "full_response": "```python\ndef count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n    \n    def dfs(x, y):\n        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == 0:\n            return\n        grid[x][y] = 0\n        dfs(x + 1, y)\n        dfs(x - 1, y)\n        dfs(x, y + 1)\n        dfs(x, y - 1)\n\n    count = 0\n    for i in range(len(grid)):\n        for j in range(len(grid[i])):\n            if grid[i][j] == 1:\n                dfs(i, j)\n                count += 1\n    return count\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 55.40655799995875,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 53.791176999993695,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 53.932585999973526,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.340819000098236,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "Count Islands in Grid",
+    "difficulty": "Hard",
+    "api_execution_time": 33.470479011535645,
+    "lines_of_code": 19,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n\n    rows, cols = len(grid), len(grid[0])\n    island_count = 0\n\n    def dfs(r, c):\n        if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] == 0:\n            return\n        \n        grid[r][c] = 0\n\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n\n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1:\n                island_count += 1\n                dfs(r, c)\n    \n    return island_count",
+    "full_response": "```python\ndef count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n\n    rows, cols = len(grid), len(grid[0])\n    island_count = 0\n\n    def dfs(r, c):\n        if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] == 0:\n            return\n        \n        grid[r][c] = 0\n\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n\n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1:\n                island_count += 1\n                dfs(r, c)\n    \n    return island_count\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 50.489169999991645,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 55.4664750000029,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.75238100005208,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.05473099993196,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "Palindrome Check",
+    "difficulty": "Easy",
+    "api_execution_time": 1.7740037441253662,
+    "lines_of_code": 4,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "import re\n\ndef is_palindrome(s: str) -> bool:\n    processed = re.sub(r'[^a-zA-Z0-9]', '', s.lower())\n    return processed == processed[::-1]",
+    "full_response": "```python\nimport re\n\ndef is_palindrome(s: str) -> bool:\n    processed = re.sub(r'[^a-zA-Z0-9]', '', s.lower())\n    return processed == processed[::-1]\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.37214500003029,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.87563099989711,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.27852899993468,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.56023099998674,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.64952599996286,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.049601999920924,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "Palindrome Check",
+    "difficulty": "Easy",
+    "api_execution_time": 18.5104820728302,
+    "lines_of_code": 3,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_palindrome(s: str) -> bool:\n    sanitized = \"\".join(char.lower() for char in s if char.isalnum())\n    return sanitized == sanitized[::-1]",
+    "full_response": "```python\ndef is_palindrome(s: str) -> bool:\n    sanitized = \"\".join(char.lower() for char in s if char.isalnum())\n    return sanitized == sanitized[::-1]\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.890239999901496,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.19927699998061,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 46.761525999954756,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.04715600000509,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.27037499990183,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 46.45585400010077,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "Valid Parentheses",
+    "difficulty": "Medium",
+    "api_execution_time": 3.409644603729248,
+    "lines_of_code": 14,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    bracket_map = {')': '(', '}': '{', ']': '['}\n    \n    for char in s:\n        if char in bracket_map.values():\n            stack.append(char)\n        elif char in bracket_map:\n            if stack and stack[-1] == bracket_map[char]:\n                stack.pop()\n            else:\n                return False\n        else:\n            return False\n    return not stack",
+    "full_response": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    bracket_map = {')': '(', '}': '{', ']': '['}\n    \n    for char in s:\n        if char in bracket_map.values():\n            stack.append(char)\n        elif char in bracket_map:\n            if stack and stack[-1] == bracket_map[char]:\n                stack.pop()\n            else:\n                return False\n        else:\n            return False\n    return not stack",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.78378600005817,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.36813500003245,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.409985000034794,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.84579299996494,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.51103199998852,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.448055999936514,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.966579000079946,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.60647399998197,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "Valid Parentheses",
+    "difficulty": "Medium",
+    "api_execution_time": 14.1193106174469,
+    "lines_of_code": 11,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top_element = stack.pop() if stack else '#'\n            if mapping[char] != top_element:\n                return False\n        else:\n            stack.append(char)\n    return not stack",
+    "full_response": "```python\ndef is_valid_parentheses(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top_element = stack.pop() if stack else '#'\n            if mapping[char] != top_element:\n                return False\n        else:\n            stack.append(char)\n    return not stack\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 51.31983500007209,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.64624999999978,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.878733000037755,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.393105999977706,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 55.5140509999319,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.41032000001633,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.460185000043566,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 56.51649999992969,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "LRU Cache",
+    "difficulty": "Hard",
+    "api_execution_time": 3.3400330543518066,
+    "lines_of_code": 16,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": null,
+    "code": "class LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        else:\n            self.cache.move_to_end(key)\n            return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "full_response": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        else:\n            self.cache.move_to_end(key)\n            return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "execution_results_raw": [
+      {
+        "op": "__init__",
+        "args": [
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.003099999958067201
+      },
+      {
+        "op": "put",
+        "args": [
+          1,
+          1
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0035000011848751456
+      },
+      {
+        "op": "put",
+        "args": [
+          2,
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0018999999156221747
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": 1,
+        "out": 1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.003200000719516538
+      },
+      {
+        "op": "put",
+        "args": [
+          3,
+          3
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.002300001142430119
+      },
+      {
+        "op": "get",
+        "args": [
+          2
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0012000000424450263
+      },
+      {
+        "op": "put",
+        "args": [
+          4,
+          4
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0012000000424450263
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0010000003385357559
+      },
+      {
+        "op": "get",
+        "args": [
+          3
+        ],
+        "exp": 3,
+        "out": 3,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0010000003385357559
+      },
+      {
+        "op": "get",
+        "args": [
+          4
+        ],
+        "exp": 4,
+        "out": 4,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0006999998731771484
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "LRU Cache",
+    "difficulty": "Hard",
+    "api_execution_time": 18.631295680999756,
+    "lines_of_code": 17,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": null,
+    "code": "class LRUCache:\n    def __init__(self, capacity: int):\n        self.capacity = capacity\n        self.cache = OrderedDict()\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache[key] = value\n            self.cache.move_to_end(key)\n        else:\n            if len(self.cache) >= self.capacity:\n                self.cache.popitem(last=False)\n            self.cache[key] = value",
+    "full_response": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity: int):\n        self.capacity = capacity\n        self.cache = OrderedDict()\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache[key] = value\n            self.cache.move_to_end(key)\n        else:\n            if len(self.cache) >= self.capacity:\n                self.cache.popitem(last=False)\n            self.cache[key] = value",
+    "execution_results_raw": [
+      {
+        "op": "__init__",
+        "args": [
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0029000002541579306
+      },
+      {
+        "op": "put",
+        "args": [
+          1,
+          1
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.003099999958067201
+      },
+      {
+        "op": "put",
+        "args": [
+          2,
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0018000009731622413
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": 1,
+        "out": 1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.00270000055024866
+      },
+      {
+        "op": "put",
+        "args": [
+          3,
+          3
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.002099999619531445
+      },
+      {
+        "op": "get",
+        "args": [
+          2
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0012999989849049598
+      },
+      {
+        "op": "put",
+        "args": [
+          4,
+          4
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0010000003385357559
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0008000006346264854
+      },
+      {
+        "op": "get",
+        "args": [
+          3
+        ],
+        "exp": 3,
+        "out": 3,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0010999992809956893
+      },
+      {
+        "op": "get",
+        "args": [
+          4
+        ],
+        "exp": 4,
+        "out": 4,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0008000006346264854
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "Two Sum",
+    "difficulty": "Easy",
+    "api_execution_time": 2.0814731121063232,
+    "lines_of_code": 7,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def two_sum(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]\n        seen[num] = i",
+    "full_response": "def two_sum(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]\n        seen[num] = i",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.74839499998507,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.839829000054124,
+        "output": [
+          1,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.99679699999615,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.39044800010106,
+        "output": [
+          0,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "Two Sum",
+    "difficulty": "Easy",
+    "api_execution_time": 17.884016275405884,
+    "lines_of_code": 7,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def two_sum(nums: list[int], target: int) -> list[int]:\n    num_to_index = {}\n    for index, num in enumerate(nums):\n        complement = target - num\n        if complement in num_to_index:\n            return [num_to_index[complement], index]\n        num_to_index[num] = index",
+    "full_response": "```python\ndef two_sum(nums: list[int], target: int) -> list[int]:\n    num_to_index = {}\n    for index, num in enumerate(nums):\n        complement = target - num\n        if complement in num_to_index:\n            return [num_to_index[complement], index]\n        num_to_index[num] = index\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.7167899999813,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.21379100005652,
+        "output": [
+          1,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.454472999992504,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.05029300007391,
+        "output": [
+          0,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "api_execution_time": 3.0801069736480713,
+    "lines_of_code": 10,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def length_of_longest_substring(s: str) -> int:\n    char_map = {}\n    left = 0\n    max_length = 0\n    \n    for right in range(len(s)):\n        if s[right] in char_map:\n            left = max(left, char_map[s[right]] + 1)\n        char_map[s[right]] = right\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length",
+    "full_response": "def length_of_longest_substring(s: str) -> int:\n    char_map = {}\n    left = 0\n    max_length = 0\n    \n    for right in range(len(s)):\n        if s[right] in char_map:\n            left = max(left, char_map[s[right]] + 1)\n        char_map[s[right]] = right\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.70756300010726,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 61.20501099997,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 53.54018499997437,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.268527000004724,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.13933699992867,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.08486700003323,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "api_execution_time": 40.161460638046265,
+    "lines_of_code": 10,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def length_of_longest_substring(s: str) -> int:\n    char_map = {}\n    max_length = 0\n    start = 0\n    for end, char in enumerate(s):\n        if char in char_map and char_map[char] >= start:\n            start = char_map[char] + 1\n        char_map[char] = end\n        max_length = max(max_length, end - start + 1)\n    return max_length",
+    "full_response": "```python\ndef length_of_longest_substring(s: str) -> int:\n    char_map = {}\n    max_length = 0\n    start = 0\n    for end, char in enumerate(s):\n        if char in char_map and char_map[char] >= start:\n            start = char_map[char] + 1\n        char_map[char] = end\n        max_length = max(max_length, end - start + 1)\n    return max_length\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.403541999983645,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.1841489999606,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.14618500004053,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.14813000002505,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.8488590000552,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 55.7780729999422,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "ChatGPT",
+    "challenge": "Minimum Edit Distance",
+    "difficulty": "Hard",
+    "api_execution_time": 4.3359599113464355,
+    "lines_of_code": 14,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def min_distance(word1: str, word2: str) -> int:\n    m, n = len(word1), len(word2)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]) + 1\n\n    return dp[m][n]",
+    "full_response": "def min_distance(word1: str, word2: str) -> int:\n    m, n = len(word1), len(word2)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]) + 1\n\n    return dp[m][n]",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 52.27625200006969,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.02526900000248,
+        "output": 5,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.41223500000069,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.10154499993769,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 53.327540999930534,
+        "output": 10,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 0,
+    "ai": "Gemini",
+    "challenge": "Minimum Edit Distance",
+    "difficulty": "Hard",
+    "api_execution_time": 68.89270186424255,
+    "lines_of_code": 15,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def min_distance(word1: str, word2: str) -> int:\n    m = len(word1)\n    n = len(word2)\n\n    # dp[i][j] will be the minimum cost to convert word1[:i] to word2[:j]\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    # Initialize base cases\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n\n    # Fill the rest of the dp table\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            cost = 0 if word1[i - 1] == word2[j - 1] else 1\n            \n            # The value is the minimum of three possibilities:\n            # 1. Deletion: The cost of converting word1[:i-1] to word2[:j] + 1\n            # 2. Insertion: The cost of converting word1[:i] to word2[:j-1] + 1\n            # 3. Substitution/Match: The cost of converting word1[:i-1] to word2[:j-1] + cost\n            dp[i][j] = min(dp[i - 1][j] + 1,\n                           dp[i][j - 1] + 1,\n                           dp[i - 1][j - 1] + cost)\n\n    return dp[m][n]",
+    "full_response": "```python\ndef min_distance(word1: str, word2: str) -> int:\n    m = len(word1)\n    n = len(word2)\n\n    # dp[i][j] will be the minimum cost to convert word1[:i] to word2[:j]\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    # Initialize base cases\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n\n    # Fill the rest of the dp table\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            cost = 0 if word1[i - 1] == word2[j - 1] else 1\n            \n            # The value is the minimum of three possibilities:\n            # 1. Deletion: The cost of converting word1[:i-1] to word2[:j] + 1\n            # 2. Insertion: The cost of converting word1[:i] to word2[:j-1] + 1\n            # 3. Substitution/Match: The cost of converting word1[:i-1] to word2[:j-1] + cost\n            dp[i][j] = min(dp[i - 1][j] + 1,\n                           dp[i][j - 1] + 1,\n                           dp[i - 1][j - 1] + cost)\n\n    return dp[m][n]\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 50.83637000007002,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 53.33510799994201,
+        "output": 5,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.28393300005973,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 56.22483499996633,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.7588950000154,
+        "output": 10,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "Fibonacci Sequence",
+    "difficulty": "Easy",
+    "api_execution_time": 2.110746145248413,
+    "lines_of_code": 9,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def fibonacci(n: int) -> list[int]:\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    fib_seq = [0, 1]\n    while len(fib_seq) < n:\n        fib_seq.append(fib_seq[-1] + fib_seq[-2])\n    return fib_seq[:n]",
+    "full_response": "def fibonacci(n: int) -> list[int]:\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    fib_seq = [0, 1]\n    while len(fib_seq) < n:\n        fib_seq.append(fib_seq[-1] + fib_seq[-2])\n    return fib_seq[:n]",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 52.10111099995629,
+        "output": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          5,
+          8,
+          13,
+          21,
+          34
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.25368099998195,
+        "output": [
+          0
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.60015800004203,
+        "output": [],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.83546599990041,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "Fibonacci Sequence",
+    "difficulty": "Easy",
+    "api_execution_time": 28.164085626602173,
+    "lines_of_code": 7,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def fibonacci(n: int) -> list[int]:\n    result = []\n    a, b = 0, 1\n    for _ in range(n):\n        result.append(a)\n        a, b = b, a + b\n    return result",
+    "full_response": "```python\ndef fibonacci(n: int) -> list[int]:\n    result = []\n    a, b = 0, 1\n    for _ in range(n):\n        result.append(a)\n        a, b = b, a + b\n    return result\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 46.87585299996044,
+        "output": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          5,
+          8,
+          13,
+          21,
+          34
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.83864599996468,
+        "output": [
+          0
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.05499000005875,
+        "output": [],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.86528799995449,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "Binary Search",
+    "difficulty": "Medium",
+    "api_execution_time": 2.746464252471924,
+    "lines_of_code": 11,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def binary_search(arr: list[int], target: int) -> int:\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = left + (right - left) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+    "full_response": "def binary_search(arr: list[int], target: int) -> int:\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = left + (right - left) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.356643999909465,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.12627199994313,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.880819000032716,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.443594999956986,
+        "output": 2,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.88350600006197,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "Binary Search",
+    "difficulty": "Medium",
+    "api_execution_time": 10.709690570831299,
+    "lines_of_code": 12,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def binary_search(arr: list[int], target: int) -> int:\n    low = 0\n    high = len(arr) - 1\n\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n            \n    return -1",
+    "full_response": "def binary_search(arr: list[int], target: int) -> int:\n    low = 0\n    high = len(arr) - 1\n\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n            \n    return -1",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.466037000049255,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.02025700005197,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.93738000000758,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.02979499993398,
+        "output": 2,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.592270000061944,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "Merge Sort",
+    "difficulty": "Medium",
+    "api_execution_time": 3.2766151428222656,
+    "lines_of_code": 20,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    sorted_list = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            sorted_list.append(left[i])\n            i += 1\n        else:\n            sorted_list.append(right[j])\n            j += 1\n            \n    sorted_list.extend(left[i:])\n    sorted_list.extend(right[j:])\n    \n    return sorted_list",
+    "full_response": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    sorted_list = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            sorted_list.append(left[i])\n            i += 1\n        else:\n            sorted_list.append(right[j])\n            j += 1\n            \n    sorted_list.extend(left[i:])\n    sorted_list.extend(right[j:])\n    \n    return sorted_list",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 51.085843000009845,
+        "output": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.85411499999282,
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.996230999956424,
+        "output": [
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.31496099998367,
+        "output": [],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "Merge Sort",
+    "difficulty": "Medium",
+    "api_execution_time": 17.306504487991333,
+    "lines_of_code": 18,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def merge_sort(arr: list[int]) -> list[int]:\n    if len(arr) <= 1:\n        return arr\n\n    mid = len(arr) // 2\n    left_half = merge_sort(arr[:mid])\n    right_half = merge_sort(arr[mid:])\n\n    sorted_list = []\n    i, j = 0, 0\n\n    while i < len(left_half) and j < len(right_half):\n        if left_half[i] < right_half[j]:\n            sorted_list.append(left_half[i])\n            i += 1\n        else:\n            sorted_list.append(right_half[j])\n            j += 1\n\n    sorted_list.extend(left_half[i:])\n    sorted_list.extend(right_half[j:])\n\n    return sorted_list",
+    "full_response": "```python\ndef merge_sort(arr: list[int]) -> list[int]:\n    if len(arr) <= 1:\n        return arr\n\n    mid = len(arr) // 2\n    left_half = merge_sort(arr[:mid])\n    right_half = merge_sort(arr[mid:])\n\n    sorted_list = []\n    i, j = 0, 0\n\n    while i < len(left_half) and j < len(right_half):\n        if left_half[i] < right_half[j]:\n            sorted_list.append(left_half[i])\n            i += 1\n        else:\n            sorted_list.append(right_half[j])\n            j += 1\n\n    sorted_list.extend(left_half[i:])\n    sorted_list.extend(right_half[j:])\n\n    return sorted_list\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 49.69127699996534,
+        "output": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.039555000083055,
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.417804999961845,
+        "output": [
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.01665499998853,
+        "output": [],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "Count Islands in Grid",
+    "difficulty": "Hard",
+    "api_execution_time": 5.010549545288086,
+    "lines_of_code": 19,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def count_islands(grid: list[list[int]]) -> int:\n    if not grid:\n        return 0\n\n    rows, cols = len(grid), len(grid[0])\n    \n    def dfs(r, c):\n        if r < 0 or c < 0 or r >= rows or c >= cols or grid[r][c] == 0:\n            return\n        grid[r][c] = 0\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n\n    island_count = 0\n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1:\n                island_count += 1\n                dfs(r, c)\n\n    return island_count",
+    "full_response": "```python\ndef count_islands(grid: list[list[int]]) -> int:\n    if not grid:\n        return 0\n\n    rows, cols = len(grid), len(grid[0])\n    \n    def dfs(r, c):\n        if r < 0 or c < 0 or r >= rows or c >= cols or grid[r][c] == 0:\n            return\n        grid[r][c] = 0\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n\n    island_count = 0\n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1:\n                island_count += 1\n                dfs(r, c)\n\n    return island_count\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 49.39747499997793,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.93592899993382,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.70271599993248,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.580170999935945,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "Count Islands in Grid",
+    "difficulty": "Hard",
+    "api_execution_time": 24.0301992893219,
+    "lines_of_code": 23,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n\n    rows, cols = len(grid), len(grid[0])\n    visited = set()\n    num_islands = 0\n\n    def dfs(r, c):\n        if (r < 0 or r >= rows or\n            c < 0 or c >= cols or\n            grid[r][c] == 0 or\n            (r, c) in visited):\n            return\n\n        visited.add((r, c))\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n\n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1 and (r, c) not in visited:\n                num_islands += 1\n                dfs(r, c)\n\n    return num_islands",
+    "full_response": "```python\ndef count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n\n    rows, cols = len(grid), len(grid[0])\n    visited = set()\n    num_islands = 0\n\n    def dfs(r, c):\n        if (r < 0 or r >= rows or\n            c < 0 or c >= cols or\n            grid[r][c] == 0 or\n            (r, c) in visited):\n            return\n\n        visited.add((r, c))\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n\n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1 and (r, c) not in visited:\n                num_islands += 1\n                dfs(r, c)\n\n    return num_islands\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.83690400006435,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.6621270000569,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.64777199998116,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.30850000009468,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "Palindrome Check",
+    "difficulty": "Easy",
+    "api_execution_time": 1.5845904350280762,
+    "lines_of_code": 3,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_palindrome(s: str) -> bool:\n    cleaned = ''.join(c for c in s.lower() if c.isalnum())\n    return cleaned == cleaned[::-1]",
+    "full_response": "def is_palindrome(s: str) -> bool:\n    cleaned = ''.join(c for c in s.lower() if c.isalnum())\n    return cleaned == cleaned[::-1]",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.672541999986606,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.145155999985036,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.273467000010896,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.915557999976045,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.71803099997396,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.487520999946355,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "Palindrome Check",
+    "difficulty": "Easy",
+    "api_execution_time": 22.13129758834839,
+    "lines_of_code": 12,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_palindrome(s: str) -> bool:\n    left, right = 0, len(s) - 1\n    while left < right:\n        while left < right and not s[left].isalnum():\n            left += 1\n        while left < right and not s[right].isalnum():\n            right -= 1\n        if s[left].lower() != s[right].lower():\n            return False\n        left += 1\n        right -= 1\n    return True",
+    "full_response": "```python\ndef is_palindrome(s: str) -> bool:\n    left, right = 0, len(s) - 1\n    while left < right:\n        while left < right and not s[left].isalnum():\n            left += 1\n        while left < right and not s[right].isalnum():\n            right -= 1\n        if s[left].lower() != s[right].lower():\n            return False\n        left += 1\n        right -= 1\n    return True\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 49.99003000000357,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.48705799990694,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.58704900002431,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.075563999987025,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.0248250000368,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 46.648150999999416,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "Valid Parentheses",
+    "difficulty": "Medium",
+    "api_execution_time": 2.7166032791137695,
+    "lines_of_code": 11,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    mapping = {')': '(', '}': '{', ']': '['}\n    \n    for char in s:\n        if char in mapping:\n            top_element = stack.pop() if stack else '#'\n            if mapping[char] != top_element:\n                return False\n        else:\n            stack.append(char)\n    \n    return not stack",
+    "full_response": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    mapping = {')': '(', '}': '{', ']': '['}\n    \n    for char in s:\n        if char in mapping:\n            top_element = stack.pop() if stack else '#'\n            if mapping[char] != top_element:\n                return False\n        else:\n            stack.append(char)\n    \n    return not stack",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 49.07049700000243,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.12757600004625,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.97502300002543,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.115310000000136,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.320997999984684,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.015168000049016,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.58383099999264,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.137014000005365,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "Valid Parentheses",
+    "difficulty": "Medium",
+    "api_execution_time": 16.270365715026855,
+    "lines_of_code": 10,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            if not stack or mapping[char] != stack.pop():\n                return False\n        else:\n            stack.append(char)\n    return not stack",
+    "full_response": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            if not stack or mapping[char] != stack.pop():\n                return False\n        else:\n            stack.append(char)\n    return not stack",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.89580199994725,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.5769049999808,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.11879899998439,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.88301700000375,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.05300600000828,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.97156000004088,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.207938000042304,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.47258000001875,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "LRU Cache",
+    "difficulty": "Hard",
+    "api_execution_time": 3.248969316482544,
+    "lines_of_code": 16,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": null,
+    "code": "class LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        else:\n            self.cache.move_to_end(key)\n            return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "full_response": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        else:\n            self.cache.move_to_end(key)\n            return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "execution_results_raw": [
+      {
+        "op": "__init__",
+        "args": [
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.003200000719516538
+      },
+      {
+        "op": "put",
+        "args": [
+          1,
+          1
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0032999996619764715
+      },
+      {
+        "op": "put",
+        "args": [
+          2,
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.001999998858082108
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": 1,
+        "out": 1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.003200000719516538
+      },
+      {
+        "op": "put",
+        "args": [
+          3,
+          3
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.001999998858082108
+      },
+      {
+        "op": "get",
+        "args": [
+          2
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0013999997463542968
+      },
+      {
+        "op": "put",
+        "args": [
+          4,
+          4
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0011000010999850929
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0010999992809956893
+      },
+      {
+        "op": "get",
+        "args": [
+          3
+        ],
+        "exp": 3,
+        "out": 3,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0012000000424450263
+      },
+      {
+        "op": "get",
+        "args": [
+          4
+        ],
+        "exp": 4,
+        "out": 4,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0008000006346264854
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "LRU Cache",
+    "difficulty": "Hard",
+    "api_execution_time": 33.9543035030365,
+    "lines_of_code": 16,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": null,
+    "code": "class LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        else:\n            self.cache.move_to_end(key)\n            return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "full_response": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        else:\n            self.cache.move_to_end(key)\n            return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "execution_results_raw": [
+      {
+        "op": "__init__",
+        "args": [
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0029000002541579306
+      },
+      {
+        "op": "put",
+        "args": [
+          1,
+          1
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.003099999958067201
+      },
+      {
+        "op": "put",
+        "args": [
+          2,
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0020000006770715117
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": 1,
+        "out": 1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.004499999704421498
+      },
+      {
+        "op": "put",
+        "args": [
+          3,
+          3
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.002099999619531445
+      },
+      {
+        "op": "get",
+        "args": [
+          2
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0015000005078036338
+      },
+      {
+        "op": "put",
+        "args": [
+          4,
+          4
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0011000010999850929
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0010000003385357559
+      },
+      {
+        "op": "get",
+        "args": [
+          3
+        ],
+        "exp": 3,
+        "out": 3,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0015000005078036338
+      },
+      {
+        "op": "get",
+        "args": [
+          4
+        ],
+        "exp": 4,
+        "out": 4,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0008000006346264854
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "Two Sum",
+    "difficulty": "Easy",
+    "api_execution_time": 1.7302420139312744,
+    "lines_of_code": 8,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def two_sum(nums: list[int], target: int) -> list[int]:\n    lookup = {}\n    for i, num in enumerate(nums):\n        needed = target - num\n        if needed in lookup:\n            return [lookup[needed], i]\n        lookup[num] = i\n    return []",
+    "full_response": "def two_sum(nums: list[int], target: int) -> list[int]:\n    lookup = {}\n    for i, num in enumerate(nums):\n        needed = target - num\n        if needed in lookup:\n            return [lookup[needed], i]\n        lookup[num] = i\n    return []",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.91887500005032,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.01903499992477,
+        "output": [
+          1,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.23772399999871,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.332155000001876,
+        "output": [
+          0,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "Two Sum",
+    "difficulty": "Easy",
+    "api_execution_time": 18.798779487609863,
+    "lines_of_code": 7,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def two_sum(nums: list[int], target: int) -> list[int]:\n    num_to_index = {}\n    for index, num in enumerate(nums):\n        complement = target - num\n        if complement in num_to_index:\n            return [num_to_index[complement], index]\n        num_to_index[num] = index",
+    "full_response": "```python\ndef two_sum(nums: list[int], target: int) -> list[int]:\n    num_to_index = {}\n    for index, num in enumerate(nums):\n        complement = target - num\n        if complement in num_to_index:\n            return [num_to_index[complement], index]\n        num_to_index[num] = index\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 50.8598300000358,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.974881999944046,
+        "output": [
+          1,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.92725000008613,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.84998000009,
+        "output": [
+          0,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "api_execution_time": 2.455448627471924,
+    "lines_of_code": 10,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def length_of_longest_substring(s: str) -> int:\n    char_map = {}\n    start = 0\n    max_len = 0\n    \n    for i, char in enumerate(s):\n        if char in char_map and char_map[char] >= start:\n            start = char_map[char] + 1\n        char_map[char] = i\n        max_len = max(max_len, i - start + 1)\n    \n    return max_len",
+    "full_response": "def length_of_longest_substring(s: str) -> int:\n    char_map = {}\n    start = 0\n    max_len = 0\n    \n    for i, char in enumerate(s):\n        if char in char_map and char_map[char] >= start:\n            start = char_map[char] + 1\n        char_map[char] = i\n        max_len = max(max_len, i - start + 1)\n    \n    return max_len",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 52.182471999913105,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.788092999984656,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.92040500019357,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.8320850001619,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.23309500009054,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.32574100009879,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "api_execution_time": 40.24968862533569,
+    "lines_of_code": 10,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def length_of_longest_substring(s: str) -> int:\n    char_index_map = {}\n    left = 0\n    max_length = 0\n    for right, char in enumerate(s):\n        if char in char_index_map and char_index_map[char] >= left:\n            left = char_index_map[char] + 1\n        char_index_map[char] = right\n        max_length = max(max_length, right - left + 1)\n    return max_length",
+    "full_response": "```python\ndef length_of_longest_substring(s: str) -> int:\n    char_index_map = {}\n    left = 0\n    max_length = 0\n    for right, char in enumerate(s):\n        if char in char_index_map and char_index_map[char] >= left:\n            left = char_index_map[char] + 1\n        char_index_map[char] = right\n        max_length = max(max_length, right - left + 1)\n    return max_length\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 50.67747800012512,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.665921000041635,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.80198199993902,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.75090799982718,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.3266559999247,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.58924800009845,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "ChatGPT",
+    "challenge": "Minimum Edit Distance",
+    "difficulty": "Hard",
+    "api_execution_time": 4.570910692214966,
+    "lines_of_code": 14,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def min_distance(word1: str, word2: str) -> int:\n    m, n = len(word1), len(word2)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]) + 1\n\n    return dp[m][n]",
+    "full_response": "def min_distance(word1: str, word2: str) -> int:\n    m, n = len(word1), len(word2)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]) + 1\n\n    return dp[m][n]",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 49.74734899997202,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.55529099990963,
+        "output": 5,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 57.051681000075405,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.64949699994759,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.4003250000078,
+        "output": 10,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "ai": "Gemini",
+    "challenge": "Minimum Edit Distance",
+    "difficulty": "Hard",
+    "api_execution_time": 45.910287857055664,
+    "lines_of_code": 17,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def min_distance(word1: str, word2: str) -> int:\n    m = len(word1)\n    n = len(word2)\n    \n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    \n    for i in range(m + 1):\n        dp[i][0] = i\n        \n    for j in range(n + 1):\n        dp[0][j] = j\n        \n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = 1 + min(dp[i - 1][j - 1],  # Substitute\n                                   dp[i - 1][j],      # Delete\n                                   dp[i][j - 1])     # Insert\n                                   \n    return dp[m][n]",
+    "full_response": "```python\ndef min_distance(word1: str, word2: str) -> int:\n    m = len(word1)\n    n = len(word2)\n    \n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    \n    for i in range(m + 1):\n        dp[i][0] = i\n        \n    for j in range(n + 1):\n        dp[0][j] = j\n        \n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = 1 + min(dp[i - 1][j - 1],  # Substitute\n                                   dp[i - 1][j],      # Delete\n                                   dp[i][j - 1])     # Insert\n                                   \n    return dp[m][n]\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 49.748794000151975,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.075337999895055,
+        "output": 5,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.951096000062535,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 56.82041900013246,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.768646000051376,
+        "output": 10,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "Fibonacci Sequence",
+    "difficulty": "Easy",
+    "api_execution_time": 2.7196080684661865,
+    "lines_of_code": 9,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def fibonacci(n: int) -> list[int]:\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    result = [0, 1]\n    for _ in range(2, n):\n        result.append(result[-1] + result[-2])\n    return result",
+    "full_response": "```python\ndef fibonacci(n: int) -> list[int]:\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    result = [0, 1]\n    for _ in range(2, n):\n        result.append(result[-1] + result[-2])\n    return result\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 50.39172000010694,
+        "output": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          5,
+          8,
+          13,
+          21,
+          34
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.95779099997344,
+        "output": [
+          0
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.060194000048796,
+        "output": [],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.69697799990536,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "Fibonacci Sequence",
+    "difficulty": "Easy",
+    "api_execution_time": 25.198978662490845,
+    "lines_of_code": 7,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def fibonacci(n: int) -> list[int]:\n    sequence = []\n    a, b = 0, 1\n    for _ in range(n):\n        sequence.append(a)\n        a, b = b, a + b\n    return sequence",
+    "full_response": "```python\ndef fibonacci(n: int) -> list[int]:\n    sequence = []\n    a, b = 0, 1\n    for _ in range(n):\n        sequence.append(a)\n        a, b = b, a + b\n    return sequence\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.67424800002118,
+        "output": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          5,
+          8,
+          13,
+          21,
+          34
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.38102600001548,
+        "output": [
+          0
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.92159899984472,
+        "output": [],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.0434579999619,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "Binary Search",
+    "difficulty": "Medium",
+    "api_execution_time": 2.05924916267395,
+    "lines_of_code": 11,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def binary_search(arr: list[int], target: int) -> int:\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+    "full_response": "def binary_search(arr: list[int], target: int) -> int:\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.84449700014193,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.4223060000204,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.361477000094965,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.88132099995346,
+        "output": 2,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.68895199999679,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "Binary Search",
+    "difficulty": "Medium",
+    "api_execution_time": 12.391932964324951,
+    "lines_of_code": 11,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def binary_search(arr: list[int], target: int) -> int:\n    left, right = 0, len(arr) - 1\n\n    while left <= right:\n        mid = left + (right - left) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n            \n    return -1",
+    "full_response": "def binary_search(arr: list[int], target: int) -> int:\n    left, right = 0, len(arr) - 1\n\n    while left <= right:\n        mid = left + (right - left) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n            \n    return -1",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.546084000008705,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.799031999986255,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.93554199998107,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.53307400005724,
+        "output": 2,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.62754600003427,
+        "output": -1,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "Merge Sort",
+    "difficulty": "Medium",
+    "api_execution_time": 3.9157819747924805,
+    "lines_of_code": 16,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def merge_sort(arr: list[int]) -> list[int]:\n    if len(arr) <= 1:\n        return arr\n    \n    def merge(left: list[int], right: list[int]) -> list[int]:\n        sorted_list = []\n        while left and right:\n            if left[0] <= right[0]:\n                sorted_list.append(left.pop(0))\n            else:\n                sorted_list.append(right.pop(0))\n        sorted_list.extend(left or right)\n        return sorted_list\n\n    middle = len(arr) // 2\n    left_half = merge_sort(arr[:middle])\n    right_half = merge_sort(arr[middle:])\n    \n    return merge(left_half, right_half)",
+    "full_response": "def merge_sort(arr: list[int]) -> list[int]:\n    if len(arr) <= 1:\n        return arr\n    \n    def merge(left: list[int], right: list[int]) -> list[int]:\n        sorted_list = []\n        while left and right:\n            if left[0] <= right[0]:\n                sorted_list.append(left.pop(0))\n            else:\n                sorted_list.append(right.pop(0))\n        sorted_list.extend(left or right)\n        return sorted_list\n\n    middle = len(arr) // 2\n    left_half = merge_sort(arr[:middle])\n    right_half = merge_sort(arr[middle:])\n    \n    return merge(left_half, right_half)",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 51.109879000023284,
+        "output": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.5603900000533,
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.62533200000507,
+        "output": [
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.64050300013878,
+        "output": [],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "Merge Sort",
+    "difficulty": "Medium",
+    "api_execution_time": 15.355578660964966,
+    "lines_of_code": 18,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def merge_sort(arr: list[int]) -> list[int]:\n    if len(arr) <= 1:\n        return arr\n\n    mid = len(arr) // 2\n    left_half = merge_sort(arr[:mid])\n    right_half = merge_sort(arr[mid:])\n\n    sorted_list = []\n    i, j = 0, 0\n\n    while i < len(left_half) and j < len(right_half):\n        if left_half[i] < right_half[j]:\n            sorted_list.append(left_half[i])\n            i += 1\n        else:\n            sorted_list.append(right_half[j])\n            j += 1\n\n    sorted_list.extend(left_half[i:])\n    sorted_list.extend(right_half[j:])\n\n    return sorted_list",
+    "full_response": "```python\ndef merge_sort(arr: list[int]) -> list[int]:\n    if len(arr) <= 1:\n        return arr\n\n    mid = len(arr) // 2\n    left_half = merge_sort(arr[:mid])\n    right_half = merge_sort(arr[mid:])\n\n    sorted_list = []\n    i, j = 0, 0\n\n    while i < len(left_half) and j < len(right_half):\n        if left_half[i] < right_half[j]:\n            sorted_list.append(left_half[i])\n            i += 1\n        else:\n            sorted_list.append(right_half[j])\n            j += 1\n\n    sorted_list.extend(left_half[i:])\n    sorted_list.extend(right_half[j:])\n\n    return sorted_list\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 53.036695999935546,
+        "output": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 53.19990999987567,
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.045270000078744,
+        "output": [
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.589810999805195,
+        "output": [],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "Count Islands in Grid",
+    "difficulty": "Hard",
+    "api_execution_time": 4.359466791152954,
+    "lines_of_code": 18,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n    \n    def dfs(r, c):\n        if r < 0 or r >= len(grid) or c < 0 or c >= len(grid[0]) or grid[r][c] == 0:\n            return\n        grid[r][c] = 0  # mark as visited\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n        \n    count = 0\n    \n    for row in range(len(grid)):\n        for col in range(len(grid[0])):\n            if grid[row][col] == 1:\n                dfs(row, col)\n                count += 1\n                \n    return count",
+    "full_response": "def count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n    \n    def dfs(r, c):\n        if r < 0 or r >= len(grid) or c < 0 or c >= len(grid[0]) or grid[r][c] == 0:\n            return\n        grid[r][c] = 0  # mark as visited\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n        \n    count = 0\n    \n    for row in range(len(grid)):\n        for col in range(len(grid[0])):\n            if grid[row][col] == 1:\n                dfs(row, col)\n                count += 1\n                \n    return count",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 50.357280000071114,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.34475500019653,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.13020599999618,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.90716399993289,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "Count Islands in Grid",
+    "difficulty": "Hard",
+    "api_execution_time": 34.11535429954529,
+    "lines_of_code": 19,
+    "completeness": 95,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n\n    rows, cols = len(grid), len(grid[0])\n    count = 0\n\n    def dfs(r, c):\n        if not (0 <= r < rows and 0 <= c < cols and grid[r][c] == 1):\n            return\n        \n        grid[r][c] = 0\n\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n\n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1:\n                count += 1\n                dfs(r, c)\n    \n    return count",
+    "full_response": "```python\ndef count_islands(grid: list[list[int]]) -> int:\n    if not grid or not grid[0]:\n        return 0\n\n    rows, cols = len(grid), len(grid[0])\n    count = 0\n\n    def dfs(r, c):\n        if not (0 <= r < rows and 0 <= c < cols and grid[r][c] == 1):\n            return\n        \n        grid[r][c] = 0\n\n        dfs(r + 1, c)\n        dfs(r - 1, c)\n        dfs(r, c + 1)\n        dfs(r, c - 1)\n\n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1:\n                count += 1\n                dfs(r, c)\n    \n    return count\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 49.094253000021126,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.269880000063495,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.57930399993893,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.22294799980409,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "Palindrome Check",
+    "difficulty": "Easy",
+    "api_execution_time": 1.5290300846099854,
+    "lines_of_code": 3,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_palindrome(s: str) -> bool:\n    filtered_chars = [ch.lower() for ch in s if ch.isalnum()]\n    return filtered_chars == filtered_chars[::-1]",
+    "full_response": "def is_palindrome(s: str) -> bool:\n    filtered_chars = [ch.lower() for ch in s if ch.isalnum()]\n    return filtered_chars == filtered_chars[::-1]",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 51.38111999985995,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.704935000065234,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 54.55425600007402,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.795698999991146,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.162290999902325,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.278108999989854,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "Palindrome Check",
+    "difficulty": "Easy",
+    "api_execution_time": 44.71127223968506,
+    "lines_of_code": 3,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_palindrome(s: str) -> bool:\n    normalized_s = \"\".join(filter(str.isalnum, s)).lower()\n    return normalized_s == normalized_s[::-1]",
+    "full_response": "def is_palindrome(s: str) -> bool:\n    normalized_s = \"\".join(filter(str.isalnum, s)).lower()\n    return normalized_s == normalized_s[::-1]",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.311817000012525,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.69705199987584,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.37416299985853,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.35240500005966,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.14682500002709,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.3746519998931,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "Valid Parentheses",
+    "difficulty": "Medium",
+    "api_execution_time": 4.635958671569824,
+    "lines_of_code": 12,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    bracket_map = {')': '(', '}': '{', ']': '['}\n    for char in s:\n        if char in bracket_map.values():\n            stack.append(char)\n        elif char in bracket_map:\n            if not stack or bracket_map[char] != stack.pop():\n                return False\n        else:\n            return False\n    return not stack",
+    "full_response": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    bracket_map = {')': '(', '}': '{', ']': '['}\n    for char in s:\n        if char in bracket_map.values():\n            stack.append(char)\n        elif char in bracket_map:\n            if not stack or bracket_map[char] != stack.pop():\n                return False\n        else:\n            return False\n    return not stack",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 50.232524999955785,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.55334300004688,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 54.76252900007239,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 54.83468200009156,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.84747599996808,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.49976300006165,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.041762999853745,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.413688999948135,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "Valid Parentheses",
+    "difficulty": "Medium",
+    "api_execution_time": 16.199488639831543,
+    "lines_of_code": 10,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            if not stack or stack.pop() != mapping[char]:\n                return False\n        else:\n            stack.append(char)\n    return not stack",
+    "full_response": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            if not stack or stack.pop() != mapping[char]:\n                return False\n        else:\n            stack.append(char)\n    return not stack",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.80304999983309,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.556914999968285,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.90404699992723,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.11227199993118,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.30337199989299,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 58.77025099994171,
+        "output": true,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.90272800000639,
+        "output": false,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.600934000158304,
+        "output": false,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "LRU Cache",
+    "difficulty": "Hard",
+    "api_execution_time": 3.560492753982544,
+    "lines_of_code": 16,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": null,
+    "code": "class LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        else:\n            self.cache.move_to_end(key)\n            return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "full_response": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        else:\n            self.cache.move_to_end(key)\n            return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "execution_results_raw": [
+      {
+        "op": "__init__",
+        "args": [
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.002800001311697997
+      },
+      {
+        "op": "put",
+        "args": [
+          1,
+          1
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0032999996619764715
+      },
+      {
+        "op": "put",
+        "args": [
+          2,
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0020000006770715117
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": 1,
+        "out": 1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0027999994927085936
+      },
+      {
+        "op": "put",
+        "args": [
+          3,
+          3
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0022999993234407157
+      },
+      {
+        "op": "get",
+        "args": [
+          2
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0013000008038943633
+      },
+      {
+        "op": "put",
+        "args": [
+          4,
+          4
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0012000000424450263
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0009000013960758224
+      },
+      {
+        "op": "get",
+        "args": [
+          3
+        ],
+        "exp": 3,
+        "out": 3,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0012000000424450263
+      },
+      {
+        "op": "get",
+        "args": [
+          4
+        ],
+        "exp": 4,
+        "out": 4,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0006999998731771484
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "LRU Cache",
+    "difficulty": "Hard",
+    "api_execution_time": 55.4113290309906,
+    "lines_of_code": 14,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": null,
+    "code": "class LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        self.cache[key] = value\n        self.cache.move_to_end(key)\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "full_response": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity: int):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key: int) -> int:\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n    def put(self, key: int, value: int) -> None:\n        self.cache[key] = value\n        self.cache.move_to_end(key)\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "execution_results_raw": [
+      {
+        "op": "__init__",
+        "args": [
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.004900000931229442
+      },
+      {
+        "op": "put",
+        "args": [
+          1,
+          1
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0073999999585794285
+      },
+      {
+        "op": "put",
+        "args": [
+          2,
+          2
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.006199999916134402
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": 1,
+        "out": 1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.004499999704421498
+      },
+      {
+        "op": "put",
+        "args": [
+          3,
+          3
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.003600000127335079
+      },
+      {
+        "op": "get",
+        "args": [
+          2
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.002200000380980782
+      },
+      {
+        "op": "put",
+        "args": [
+          4,
+          4
+        ],
+        "exp": null,
+        "out": "OK",
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0017999991541728377
+      },
+      {
+        "op": "get",
+        "args": [
+          1
+        ],
+        "exp": -1,
+        "out": -1,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0017000002117129043
+      },
+      {
+        "op": "get",
+        "args": [
+          3
+        ],
+        "exp": 3,
+        "out": 3,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.002200000380980782
+      },
+      {
+        "op": "get",
+        "args": [
+          4
+        ],
+        "exp": 4,
+        "out": 4,
+        "ok": true,
+        "err": null,
+        "t_ms": 0.0013000008038943633
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "Two Sum",
+    "difficulty": "Easy",
+    "api_execution_time": 2.2430408000946045,
+    "lines_of_code": 8,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def two_sum(nums: list[int], target: int) -> list[int]:\n    index_map = {}\n    for index, num in enumerate(nums):\n        difference = target - num\n        if difference in index_map:\n            return [index_map[difference], index]\n        index_map[num] = index\n    return []",
+    "full_response": "def two_sum(nums: list[int], target: int) -> list[int]:\n    index_map = {}\n    for index, num in enumerate(nums):\n        difference = target - num\n        if difference in index_map:\n            return [index_map[difference], index]\n        index_map[num] = index\n    return []",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.47817900008522,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 46.6928050000206,
+        "output": [
+          1,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.01127900006941,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.40150700006052,
+        "output": [
+          0,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "Two Sum",
+    "difficulty": "Easy",
+    "api_execution_time": 19.881144046783447,
+    "lines_of_code": 7,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def two_sum(nums: list[int], target: int) -> list[int]:\n    num_to_index = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_to_index:\n            return [num_to_index[complement], i]\n        num_to_index[num] = i",
+    "full_response": "```python\ndef two_sum(nums: list[int], target: int) -> list[int]:\n    num_to_index = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_to_index:\n            return [num_to_index[complement], i]\n        num_to_index[num] = i\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 49.54519900002197,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.934401999962574,
+        "output": [
+          1,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.96657499991852,
+        "output": [
+          0,
+          1
+        ],
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.931109999964974,
+        "output": [
+          0,
+          2
+        ],
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "api_execution_time": 2.332406520843506,
+    "lines_of_code": 9,
+    "completeness": 80,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def length_of_longest_substring(s: str) -> int:\n    char_map = {}\n    start = max_len = 0\n    for index, char in enumerate(s):\n        if char in char_map and char_map[char] >= start:\n            start = char_map[char] + 1\n        char_map[char] = index\n        max_len = max(max_len, index - start + 1)\n    return max_len",
+    "full_response": "def length_of_longest_substring(s: str) -> int:\n    char_map = {}\n    start = max_len = 0\n    for index, char in enumerate(s):\n        if char in char_map and char_map[char] >= start:\n            start = char_map[char] + 1\n        char_map[char] = index\n        max_len = max(max_len, index - start + 1)\n    return max_len",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 59.36098099982701,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.24638999996023,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.148129000035624,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 50.5782409998119,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.036944999850675,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.441519000083645,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "api_execution_time": 30.766615629196167,
+    "lines_of_code": 10,
+    "completeness": 90,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def length_of_longest_substring(s: str) -> int:\n    char_to_index = {}\n    left = 0\n    max_length = 0\n    for right, char in enumerate(s):\n        if char in char_to_index and char_to_index[char] >= left:\n            left = char_to_index[char] + 1\n        char_to_index[char] = right\n        max_length = max(max_length, right - left + 1)\n    return max_length",
+    "full_response": "```python\ndef length_of_longest_substring(s: str) -> int:\n    char_to_index = {}\n    left = 0\n    max_length = 0\n    for right, char in enumerate(s):\n        if char in char_to_index and char_to_index[char] >= left:\n            left = char_to_index[char] + 1\n        char_to_index[char] = right\n        max_length = max(max_length, right - left + 1)\n    return max_length\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 48.66515300000174,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 51.79958500002613,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.44378499999402,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.31496200015317,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 53.36786999987453,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.99140899978738,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "ChatGPT",
+    "challenge": "Minimum Edit Distance",
+    "difficulty": "Hard",
+    "api_execution_time": 4.010548114776611,
+    "lines_of_code": 14,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def min_distance(word1: str, word2: str) -> int:\n    m, n = len(word1), len(word2)\n    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        for j in range(n + 1):\n            if i == 0:\n                dp[i][j] = j\n            elif j == 0:\n                dp[i][j] = i\n            elif word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = 1 + min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1])\n\n    return dp[m][n]",
+    "full_response": "def min_distance(word1: str, word2: str) -> int:\n    m, n = len(word1), len(word2)\n    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        for j in range(n + 1):\n            if i == 0:\n                dp[i][j] = j\n            elif j == 0:\n                dp[i][j] = i\n            elif word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = 1 + min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1])\n\n    return dp[m][n]",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 52.02052800018464,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.564694000011514,
+        "output": 5,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 52.171774000044024,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.30898999989586,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.196372000096744,
+        "output": 10,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "ai": "Gemini",
+    "challenge": "Minimum Edit Distance",
+    "difficulty": "Hard",
+    "api_execution_time": 61.989041805267334,
+    "lines_of_code": 17,
+    "completeness": 85,
+    "flake8_issues": -1,
+    "num_execution_errors": 0,
+    "first_execution_error": "",
+    "code": "def min_distance(word1: str, word2: str) -> int:\n    m = len(word1)\n    n = len(word2)\n\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        dp[i][0] = i\n    \n    for j in range(n + 1):\n        dp[0][j] = j\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = 1 + min(dp[i - 1][j],        # Deletion\n                                   dp[i][j - 1],        # Insertion\n                                   dp[i - 1][j - 1])    # Substitution\n    \n    return dp[m][n]",
+    "full_response": "```python\ndef min_distance(word1: str, word2: str) -> int:\n    m = len(word1)\n    n = len(word2)\n\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        dp[i][0] = i\n    \n    for j in range(n + 1):\n        dp[0][j] = j\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if word1[i - 1] == word2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = 1 + min(dp[i - 1][j],        # Deletion\n                                   dp[i][j - 1],        # Insertion\n                                   dp[i - 1][j - 1])    # Substitution\n    \n    return dp[m][n]\n```",
+    "execution_results_raw": [
+      {
+        "error": null,
+        "execution_time_ms": 47.788175999812665,
+        "output": 3,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.370024999916495,
+        "output": 5,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 47.80305499980386,
+        "output": 0,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 48.1290299999273,
+        "output": 1,
+        "stdout": "",
+        "success": true
+      },
+      {
+        "error": null,
+        "execution_time_ms": 49.22814099995776,
+        "output": 10,
+        "stdout": "",
+        "success": true
+      }
+    ]
+  }
+]
